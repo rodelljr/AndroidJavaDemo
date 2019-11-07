@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/layout_main"
+    android:background="@color/colorOffWhite"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -31,7 +32,8 @@
 
 <androidx.appcompat.widget.AppCompatSpinner
     android:id="@+id/sp_drop"
-    android:layout_width="match_parent"
+    style="@style/Widget.AppCompat.DropDownItem.Spinner"
+    android:layout_width="250dp"
     android:layout_height="wrap_content"
     android:layout_below="@id/tv_title"
     android:layout_margin="10dp"

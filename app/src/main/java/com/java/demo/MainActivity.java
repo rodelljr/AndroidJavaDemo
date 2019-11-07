@@ -31,7 +31,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements GetDataListener {
 
-    private View mLayout;
     private double mLat, mLon;
     private AppCompatSpinner mSpinner;
     private List<LocationModel> model;
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements GetDataListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mLayout = findViewById(R.id.layout_main);
         mSpinner = findViewById(R.id.sp_drop);
         setupSpinner();
     }
@@ -56,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements GetDataListener {
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
                 mLat = model.get(i).getLat();
                 mLon = model.get(i).getLon();
             }
@@ -70,8 +67,10 @@ public class MainActivity extends AppCompatActivity implements GetDataListener {
 
     private List<LocationModel> myTestModel() {
         model = new ArrayList<>();
-        model.add(new LocationModel("Somewhere", 38.56042, -94.396013));
-        model.add(new LocationModel("Another Place",40.6974034, -74.1197637 ));
+        model.add(new LocationModel("Arrowhead Stadium", 39.0527456, -94.490726));
+        model.add(new LocationModel("Kauffman Stadium",39.0489432, -94.4861044));
+        model.add(new LocationModel("Children\'s Mercy Park",39.121597, -94.8253654));
+        model.add(new LocationModel("Sprint Center",39.0974708, -94.5823416));
         return model;
     }
 

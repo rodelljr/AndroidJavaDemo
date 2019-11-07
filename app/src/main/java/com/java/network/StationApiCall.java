@@ -42,8 +42,7 @@ public class StationApiCall extends AsyncTask<String, Void, String> {
     private String connect(String url) {
         try {
             OkHttpClient conn = new OkHttpClient();
-            Request request = new Request.Builder()
-                    .url(url).build();
+            Request request = new Request.Builder().url(url).build();
             Response response = conn.newCall(request).execute();
             return response.body().string();
         } catch(IOException ex) {
